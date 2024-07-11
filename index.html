@@ -10,6 +10,14 @@
       crossorigin="anonymous"
     ></script>
     <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ZkxiKYqp_oG_f2st");
+      })();
+</script>
   </head>
   <body>
     <section id="landing--page">
@@ -25,28 +33,28 @@
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black click"
+              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
               >ABOUT</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black click"
+              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
               >PROJECTS</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black click"
+              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
               >CONTACT</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black click"
+              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
               ><i class="fa-solid fa-circle-half-stroke"></i
             ></a>
           </li>
@@ -85,6 +93,72 @@
         <div class="scroll__icon click">
         </div>
     </a>
+    <div class="modal">
+      <a href="" class="modal__half modal__about">
+        <h3 class="modal__title modal__about--title">Just a bit about me.</h3>
+        <h4 class="modal__sub-title modal__about--sub-title">
+          Frontend Software Developer
+        </h4>
+        <p class="modal__para">
+          I am an <b class="aqua">business executive</b>, with years of <b class="aqua">experience in management and project management</b> in the Home Building Industry.
+          <br>
+          I have become a <b class="aqua">software engineer</b> to add value to my background and leadership skills.
+          <br>
+          I'm looking for ways to <b class="aqua">help bring efficiency</b> to an organization through software development.
+        </p>
+        <div class="modal__languages">
+          <figure class="modal__language">
+            <img class="modal__language--img"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+            alt="">
+            <span class="language__name">HTML</span>
+          </figure>        
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png"
+              alt="">
+              <span class="language__name">CSS</span>
+          </figure>        
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png"
+            alt="">
+            <span class="language__name">JavaScript</span>
+          </figure>
+          <figure class="modal__language">
+            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png"
+              alt="">
+              <span class="language__name">React</span>
+          </figure>
+        </div>
+      </a>
+      <a href="" class="modal__half modal__contact">
+        <h3 class="modal__title modal__about--title">Let's chat!</h3>
+        <h4 class="modal__sub-title modal__about--sub-title">
+          I'm currently open to new opportunities
+        </h4>
+        <form id="contact__form" onsubmit="contact(event)" class="form">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user__name" type="text" required >
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user__email" type="email" required >
+          </div>
+          <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div>          
+        <button id="contact__submit" class="form__submit" >Send it to me</button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+          <i class="fas fa fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thank you for the message! I'm looking forward to speaking with you soon.
+        </div>
+      </a>
+        <i class="fas fa-times modal__exit click"></i>
+    </div>
     </section>
     <section id="Projects">
       <div class="row">
@@ -177,7 +251,7 @@
       <figure>
         <img 
         id="personal-logo" 
-        src="./assets/personal logo 2.png" 
+        src="./assets/personal logo 3.png"
         alt="personal logo">
       </figure>
     </div>
@@ -215,7 +289,7 @@
         </a>
     </div>
     <p class="copyright">
-      Copyright &#169 2024 Tim Smith
+      By Tim Smith 2024
     </p>
   </div>
   </footer>
