@@ -151,7 +151,7 @@ nav,
 .dark-theme .section__title,
 .dark-theme .section__sub-title,
 .dark-theme .nav__link--anchor,
-.dark-theme .fa-solid {
+.dark-theme .fa-circle-half-stroke {
   color: #fff;
 }
 
@@ -170,7 +170,7 @@ nav,
 .dark-theme .linkedin,
 .dark-theme .github,
 .dark-theme .pdf {
-  background-color: #fff;
+  background-color: #3e9276;
   color: #242424;
 }
 
@@ -178,8 +178,13 @@ nav,
   border-color: #fff;
 }
 
-.dark-theme .scroll__icon::after .dark-theme .link__hover-effect--aqua:after {
+.dark-theme .scroll__icon::after {
   border-color: #fff;
+  background-color: #fff;
+}
+
+.dark-theme .link__hover-effect--aqua {
+  color: #fff;
 }
 
 .dark-theme .fa-envelope {
@@ -311,6 +316,13 @@ nav {
   filter: invert();
 }
 
+#footer__personal-logo {
+  width: 50px;
+  height: 50px;
+  margin: 8px;
+  filter: none;
+}
+
 .nav__link--list {
   font-size: 12px;
   font-weight: 700;
@@ -410,6 +422,7 @@ nav {
 .modal__contact {
   background-color: #242424;
   color: #fff;
+  transform: translateX(110%);
 }
 
 .modal__title {
@@ -596,6 +609,10 @@ footer {
   padding: 6% 0;
 }
 
+.footer__container {
+  z-index: 80;
+}
+
 .footer__row {
   display: flex;
   flex-direction: column;
@@ -724,5 +741,8 @@ SMALL PHONES, TABLETS, LARGE SMART PHONES
   }
   .project__description--sub-title {
     margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 40px;
   }
 }
