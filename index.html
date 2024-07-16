@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tim Smith</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/fc1e806183.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/fc1e806183.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("ZkxiKYqp_oG_f2st");
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+        publicKey: "_ZkxiKYqp_oG_f2st",
+        });
       })();
-</script>
+    </script>
   </head>
+
   <body>
-    <section id="landing--page">
+    <section id="landing--page" onmousemove = "moveBackground(event)">
       <nav>
         <figure>
           <img
             id="personal-logo"
-            src="./assets/personal logo 2.png"
+            src="./assets/personal logo 3.png" 
             alt="personal logo"
           />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
+              class="nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--aqua click"
               >ABOUT</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
+              href="#projects"
+              class="nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--aqua click"
               >PROJECTS</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
+              class="nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--aqua click"
               >CONTACT</a
             >
           </li>
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--aqua click"
-              ><i class="fa-solid fa-circle-half-stroke"></i
-            ></a>
+              class="nav__link--anchor 
+              link__hover-effect 
+              link__hover-effect--aqua click"
+              ><i class="fa-solid fa-circle-half-stroke" onclick="toggleContrast()"></i>
+            </a>
           </li>
         </ul>
       </nav>
@@ -66,9 +76,9 @@
           <h1 class="title title--aqua">I'm Tim.</h1>
           <p class="header__para">
             I'm a <b class="aqua">Frontend Engineer</b> with a passion <br />
-            for building web applications that create effeciency for users.
+            for building web applications that create efficiency for users.
             <br />
-            Here is a bit more <a href="#"></a><b class="aqua">about me.</b></a>
+            Here is a bit more <a href="#"></a><b class="aqua click" onclick="toggleModal()">about me.</b></a>
           </p>
           <ul class="icons">
             <a href="#">
@@ -86,17 +96,19 @@
           </ul>
         </div>
       </header>
-      <button class="mail__btn click">
+      <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
             <i class="fa-solid fa-envelope"></i>
-    </button>
-    <a href="" class="scroll">
+      </button>
+      </a>
+      <a href="" class="scroll">
         <div class="scroll__icon click">
         </div>
-    </a>
-    <div class="modal">
+      </a>
+      <div class="modal">
       <a href="" class="modal__half modal__about">
-        <h3 class="modal__title modal__about--title">Just a bit about me.</h3>
-        <h4 class="modal__sub-title modal__about--sub-title">
+        <h3 class="modal__title modal__title--about">Just a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">
           Frontend Software Developer
         </h4>
         <p class="modal__para">
@@ -104,7 +116,7 @@
           <br>
           I have become a <b class="aqua">software engineer</b> to add value to my background and leadership skills.
           <br>
-          I'm looking for ways to <b class="aqua">help bring efficiency</b> to an organization through software development.
+          I'm looking for ways to <b class="aqua">help bring efficiency</b> to an organization through Frontend development.
         </p>
         <div class="modal__languages">
           <figure class="modal__language">
@@ -130,19 +142,22 @@
           </figure>
         </div>
       </a>
-      <a href="" class="modal__half modal__contact">
-        <h3 class="modal__title modal__about--title">Let's chat!</h3>
-        <h4 class="modal__sub-title modal__about--sub-title">
+      <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <h3 class="modal__title modal__title--contact">
+          Let's chat!
+        </h3>
+        <h3 class="modal__sub-title modal__sub-title--contact">
           I'm currently open to new opportunities
-        </h4>
+        </h3>
         <form id="contact__form" onsubmit="contact(event)" class="form">
           <div class="form__item">
             <label class="form__item--label">Name</label>
-            <input class="input" name="user_name" type="text" required >
+            <input class="input" name="user_name" type="text" required ></input>
           </div>
           <div class="form__item">
             <label class="form__item--label">Email</label>
-            <input class="input" name="user_email" type="email" required >
+            <input class="input" name="user_email" type="email" required ></input>
           </div>
           <div class="form__item">
             <label class="form__item--label">Message</label>
@@ -156,14 +171,22 @@
         <div class="modal__overlay modal__overlay--success">
           Thank you for the message! I'm looking forward to speaking with you soon.
         </div>
-      </a>
-        <i class="fas fa-times modal__exit click"></i>
+      </div>
     </div>
+    <img src="./assets/semi circle.svg" class="shape shape--0">
+    <img src="./assets/circle.svg" class="shape shape--1">
+    <img src="./assets/squiggly.svg" class="shape shape--2">
+    <img src="./assets/circle.svg" class="shape shape--3">
+    <img src="./assets/triangle.svg" class="shape shape--4">
+    <img src="./assets/circle.svg" class="shape shape--5">
+    <img src="./assets/squiggly.svg" class="shape shape--6">
+    <img src="./assets/circle.svg" class="shape shape--7">
+    <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
-    <section id="Projects">
+    <section id="projects">
       <div class="row">
-        <h1 class="section__title">Here are some of my
-          <span class="aqua">projects</span>
+        <h1 class="section__title">
+          Here are some of my<span class="aqua">&nbsp;projects</span>
         </h1>
         <ul class="project__list">
           <li class="project">
@@ -271,12 +294,11 @@
         ">
         LinkedIn
         </a>
-
-        <a href="#" class="
+        <a href="#" class=" 
         footer__social--link
         link__hover-effect
         link__hover-effect--white
-        ">
+        "onclick='toggleModal()'>
         Email
         </a>
   
