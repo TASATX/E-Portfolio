@@ -131,6 +131,11 @@ textarea:focus {
   width: 100%;
 }
 
+.footer__link--hover-effect:hover::after {
+  left: 0;
+  width: 75%;  
+}
+
 nav,
 .scroll,
 .header {
@@ -335,7 +340,7 @@ nav {
 
 .nav__link--anchor {
   color: #3e9276;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -642,6 +647,7 @@ SHAPES
 
 .shape {
   position: fixed;
+  z-index: 0;
 }
 
 .shape--0 {
